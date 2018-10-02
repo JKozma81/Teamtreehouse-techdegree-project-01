@@ -53,6 +53,8 @@ function printQuote() {
       htmlCode += '<span class="citation">' + selectedQuote.citation + '</span></p>'
     } else if (selectedQuote.citation === '' && selectedQuote.year !== '') {
       htmlCode += '<span class="year">' + selectedQuote.year + '</span></p>'
+    } else {
+      htmlCode += '</p>';
     }
   
   } else if (!selectedQuote.hasOwnProperty('citation') && selectedQuote.hasOwnProperty('year')) {
