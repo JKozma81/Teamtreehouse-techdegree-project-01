@@ -44,33 +44,36 @@ function printQuote() {
   let selectedQuote = getRandomQuote(tempQuotes);
   let color = getRandomColor();
   let htmlCode = '<p class="quote">' + selectedQuote.quote + '</p><p class="source">' + selectedQuote.source;
+  let citation = '<span class="citation">' + selectedQuote.citation + '</span>';
+  let year = '<span class="year">' + selectedQuote.year + '</span>';
+  let end = '</p>';
 
   if (selectedQuote.hasOwnProperty('citation') && selectedQuote.hasOwnProperty('year')) {
   
     if (selectedQuote.citation !== '' && selectedQuote.year !== '') {
-      htmlCode += '<span class="citation">' + selectedQuote.citation + '</span><span class="year">' + selectedQuote.year + '</span></p>';
+      htmlCode += citation + year + end;
     } else if (selectedQuote.citation !== '' && selectedQuote.year === '') {
-      htmlCode += '<span class="citation">' + selectedQuote.citation + '</span></p>'
+      htmlCode += citation + end;
     } else if (selectedQuote.citation === '' && selectedQuote.year !== '') {
-      htmlCode += '<span class="year">' + selectedQuote.year + '</span></p>'
+      htmlCode += year + end;
     } else {
-      htmlCode += '</p>';
+      htmlCode += end;
     }
   
   } else if (!selectedQuote.hasOwnProperty('citation') && selectedQuote.hasOwnProperty('year')) {
   
     if (selectedQuote.year !== '') {
-      htmlCode += '<span class="year">' + selectedQuote.year + '</span></p>';
+      htmlCode += year + end;
     }
   
   } else if (selectedQuote.hasOwnProperty('citation') && !selectedQuote.hasOwnProperty('year')) {
 
     if (selectedQuote.citation !== '') {
-      htmlCode += '<span class="citation">' + selectedQuote.citation + '</span></p>';
+      htmlCode += citation + end;
     }
 
   } else {
-    htmlCode += '</p>';
+    htmlCode += end;
   }
   
   document.getElementById('quote-box').innerHTML = htmlCode;
