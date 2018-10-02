@@ -16,50 +16,45 @@ const quotes = [
 {
   quote: "I'm as mad as hell and I'm not gonna take this anymore!",
   source: "Howard Beale",
-  citation: "Network",
+  citation: "",
   year: "1976"
 },
 {
   quote: "Champagne for my real friends, real pain for my sham friends!",
   source: "Monty Brogan",
   citation: "25th hour",
-  year: "2002"
+  year: ""
 },
 {
   quote: "If you think of yourself as funny, you become tragic.",
   source: "Seymour Moskowitz",
-  citation: "Minnie and Moskowitz",
   year: "1971"
 },
 {
   quote: "As far back as I can remember, I always wanted to be a gangster",
   source: "Henry Hill",
-  citation: "Goodfellas",
-  year: "1990"
+  citation: "Goodfellas"
 },
 {
   quote: "What we've got here is ... failure to communicate",
-  source: "Captain",
-  citation: "Cool hand Luke",
-  year: "1967"
+  source: "Captain"
 },
 {
   quote: "You don't make up for your sins in church. You do it in the streets",
   source: "Charlie",
-  citation: "Mean streets",
   year: "1973"
 },
 {
   quote: "I was a better man with you, as a woman... than I ever was with a woman, as a man.",
   source: "Michael Dorsey",
-  citation: "Tootsie",
+  citation: "",
   year: "1982"
 },
 {
   quote: "Madness! Madness!",
   source: "Dr. Clipton",
   citation: "The bridge on the river Kwai",
-  year: "1957"
+  year: ""
 },
 {
   quote: "After fifteen minutes I wanted to marry her, and after half an hour I completely gave up the idea of stealing her purse.",
@@ -71,7 +66,7 @@ const quotes = [
   quote: "Not only are you rich, but you want to be loved as if you are poor.",
   source: "Garance",
   citation: "Les enfants du paradis",
-  year: "1945"
+  year: ""
 },
 {
   quote: "Is it safe?",
@@ -88,8 +83,7 @@ const quotes = [
 {
   quote: "I love you. I've loved you since the first moment I saw you. I guess maybe I've even loved you before I saw you.",
   source: "George Eastman",
-  citation: "A place in the sun",
-  year: "1951"
+  citation: "A place in the sun"
 },
 {
   quote: "I know who I am!",
@@ -106,7 +100,6 @@ const quotes = [
 {
   quote: "It ain't about how hard ya hit. It's about how hard you can get it and keep moving forward. How much you can take and keep moving forward. That's how winning is done!",
   source: "Rocky Balboa",
-  citation: "Rocky Balboa",
   year: "2006"
 },
 {

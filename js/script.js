@@ -45,14 +45,32 @@ function printQuote() {
   let color = getRandomColor();
   let htmlCode = '<p class="quote">' + selectedQuote.quote + '</p><p class="source">' + selectedQuote.source;
 
-  if (selectedQuote.citation === '') {
-    htmlCode += '</p>';
-  } else if (selectedQuote.year === '') {
-    htmlCode += '<span class="citation">' + selectedQuote.citation + '</span></p>';
-  } else {
-    htmlCode += '<span class="citation">' + selectedQuote.citation + '</span><span class="year">' + selectedQuote.year + '</span></p>'
-  }
+  if (selectedQuote.hasOwnProperty('citation') && selectedQuote.hasOwnProperty('year')) {
+  
+    if (selectedQuote.citation !== '' && selectedQuote.year !== '') {
+      htmlCode += '<span class="citation">' + selectedQuote.citation + '</span><span class="year">' + selectedQuote.year + '</span></p>';
+    } else if (selectedQuote.citation !== '' && selectedQuote.year === '') {
+      htmlCode += '<span class="citation">' + selectedQuote.citation + '</span></p>'
+    } else if (selectedQuote.citation === '' && selectedQuote.year !== '') {
+      htmlCode += '<span class="year">' + selectedQuote.year + '</span></p>'
+    }
+  
+  } else if (!selectedQuote.hasOwnProperty('citation') && selectedQuote.hasOwnProperty('year')) {
+  
+    if (selectedQuote.year !== '') {
+      htmlCode += '<span class="year">' + selectedQuote.year + '</span></p>';
+    }
+  
+  } else if (selectedQuote.hasOwnProperty('citation') && !selectedQuote.hasOwnProperty('year')) {
 
+    if (selectedQuote.citation !== '') {
+      htmlCode += '<span class="citation">' + selectedQuote.citation + '</span></p>';
+    }
+
+  } else {
+    htmlCode += '</p>';
+  }
+  
   document.getElementById('quote-box').innerHTML = htmlCode;
 
   document.querySelector('body').style.backgroundColor = color;
@@ -76,7 +94,7 @@ function stop() {
 //Starts the program
 function go() {
   generateQuotes();
-  start();
+  printQuote();
 }
 
 window.onload = go();
